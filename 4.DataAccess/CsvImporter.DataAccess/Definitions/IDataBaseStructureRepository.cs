@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace CsvImporter.DataAccess
+namespace CsvImporter.DataAccess.Definitions
 {
 	public interface IDataBaseStructureRepository
 	{
