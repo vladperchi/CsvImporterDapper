@@ -13,10 +13,10 @@ namespace CsvImporter.DataAccess.Base.Implementations
 	public class DapperBase<T> : IDapperBase<T> where T : class
 	{
 		private SqlConnection sqlConnection;
-		private IApplicationSettingsManager applicationSettingsManager { get; }
+		private IApplicationSettingsManager ApplicationSettingsManager { get; }
 		public DapperBase(IApplicationSettingsManager applicationSettingsManager)
 		{
-			this.applicationSettingsManager = applicationSettingsManager;
+			this.ApplicationSettingsManager = applicationSettingsManager;
 		}
 
 
@@ -91,7 +91,7 @@ namespace CsvImporter.DataAccess.Base.Implementations
 
 		private async Task<SqlConnection> GetSqlConnectionAsync()
 		{
-			var stringConnection = await applicationSettingsManager.GetConnectionStringValuebyKey(Constans.CONNECTION_STRING_KEY);
+			var stringConnection = await ApplicationSettingsManager.GetConnectionStringValuebyKey(Constans.CONNECTION_STRING_KEY);
 			SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(stringConnection);
 			var targetDataBase = builder.InitialCatalog;
 			await CreateDataBaseIfNotExist(builder);
