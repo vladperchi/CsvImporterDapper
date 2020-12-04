@@ -16,8 +16,4 @@
     <ProjectReference Include="..\..\4.DataAccess\CsvImporter.DataAccess\CsvImporter.DataAccess.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Definitions\" />
-  </ItemGroup>
-
 </Project>
