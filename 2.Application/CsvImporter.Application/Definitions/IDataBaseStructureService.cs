@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 
 
-namespace CsvImporter.Application
+namespace CsvImporter.Application.Definitions
 {
 	public interface IDataBaseStructureService
 	{

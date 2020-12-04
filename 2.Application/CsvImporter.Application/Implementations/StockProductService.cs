@@ -1,4 +1,5 @@
-﻿using CsvImporter.DataAccess.Definitions;
+﻿using CsvImporter.Application.Definitions;
+using CsvImporter.DataAccess.Definitions;
 using System.Threading.Tasks;
 
 namespace CsvImporter.Application.Implementation
