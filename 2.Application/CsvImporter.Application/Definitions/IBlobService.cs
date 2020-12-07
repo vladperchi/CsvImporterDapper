@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CsvImporter.Domain.Settings;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace CsvImporter.Application.Definitions
 {
-	interface IBlobService
+	public interface IBlobService
 	{
+		Task<Stream> GetFileFromBlobStorage(BlobRequest blobRequest);
 	}
 }

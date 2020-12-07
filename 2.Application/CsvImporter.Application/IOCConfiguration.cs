@@ -14,6 +14,7 @@ namespace CsvImporter.Application
 			container.RegisterDataAccessDependencies();
 			container.AddScoped<IStockProductService, StockProductService>();
 			container.AddScoped<IDataBaseStructureService, DataBaseStructureService>();
+			container.AddScoped<IBlobService, BlobService>();
 		}
 	}
 }
