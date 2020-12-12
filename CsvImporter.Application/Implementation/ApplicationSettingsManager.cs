@@ -1,4 +1,4 @@
-﻿using CsvImporter.Domain.Common.Definitions;
+﻿using CsvImporter.Domain.Common;
 using Microsoft.Extensions.Configuration;
 using System.Threading.Tasks;
 

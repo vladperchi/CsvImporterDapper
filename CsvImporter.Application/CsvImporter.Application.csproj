@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\3.Domain\CsvImporter.Domain.Common\CsvImporter.Domain.Common.csproj" />
-    <ProjectReference Include="..\..\4.DataAccess\CsvImporter.DataAccess\CsvImporter.DataAccess.csproj" />
+    <ProjectReference Include="..\CsvImporter.DataAccess\CsvImporter.DataAccess.csproj" />
+    <ProjectReference Include="..\CsvImporter.Domain.Common\CsvImporter.Domain.Common.csproj" />
   </ItemGroup>
 
 </Project>

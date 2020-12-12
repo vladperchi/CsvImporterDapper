@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace CsvImporter.Application.Definitions
+namespace CsvImporter.Application
 {
 	public interface IStockProductService
 	{

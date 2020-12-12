@@ -1,7 +1,7 @@
-﻿using CsvImporter.Application.Definitions;
-using CsvImporter.Application.Implementation;
+﻿using CsvImporter.Application.Implementation;
+using CsvImporter.Application.Interfaces;
 using CsvImporter.DataAccess;
-using CsvImporter.Domain.Common.Definitions;
+using CsvImporter.Domain.Common;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CsvImporter.Application
