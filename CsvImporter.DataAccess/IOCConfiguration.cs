@@ -1,5 +1,4 @@
 ﻿using CsvImporter.DataAccess.Base;
-using CsvImporter.DataAccess.Definitions;
 using CsvImporter.DataAccess.Implementations;
 using Microsoft.Extensions.DependencyInjection;
 

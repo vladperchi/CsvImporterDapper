@@ -1,6 +1,5 @@
 ﻿using CsvImporter.DataAccess.Base.Definitions;
-using CsvImporter.DataAccess.Definitions;
-using CsvImporter.Domain.Entities;
+using CsvImporter.Domain;
 using Dapper;
 using System.Threading.Tasks;
 
