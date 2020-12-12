@@ -1,6 +1,5 @@
 ﻿using CsvImporter.DataAccess.Base.Definitions;
 using CsvImporter.Domain.Common;
-using CsvImporter.Domain.Common.Definitions;
 using Dapper;
 using System;
 using System.Collections.Generic;
@@ -13,10 +12,10 @@ namespace CsvImporter.DataAccess.Base.Implementations
 	public class DapperBase<T> : IDapperBase<T> where T : class
 	{
 		private SqlConnection sqlConnection;
-		private IApplicationSettingsManager ApplicationSettingsManager { get; }
+		private IApplicationSettingsManager applicationSettingsManager { get; }
 		public DapperBase(IApplicationSettingsManager applicationSettingsManager)
 		{
-			this.ApplicationSettingsManager = applicationSettingsManager;
+			this.applicationSettingsManager = applicationSettingsManager;
 		}
 
 
@@ -91,7 +90,7 @@ namespace CsvImporter.DataAccess.Base.Implementations
 
 		private async Task<SqlConnection> GetSqlConnectionAsync()
 		{
-			var stringConnection = await ApplicationSettingsManager.GetConnectionStringValuebyKey(Constans.CONNECTION_STRING_KEY);
+			var stringConnection = await applicationSettingsManager.GetConnectionStringValuebyKey(Constans.CONNECTION_STRING_KEY);
 			SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(stringConnection);
 			var targetDataBase = builder.InitialCatalog;
 			await CreateDataBaseIfNotExist(builder);
@@ -118,11 +117,11 @@ namespace CsvImporter.DataAccess.Base.Implementations
 			{
 				var modelRelations = new Dictionary<int, T>();
 				var response = await sqlConnection.QueryAsync<T, TRelation1, T>(sql,
-					(pd, pp) =>
-					{
-						var modelRow = mapperBody(pd, pp, modelRelations);
-						return modelRow;
-					}, splitOn: splitOn, param: parameters);
+				   (pd, pp) =>
+				   {
+					   var modelRow = mapperBody(pd, pp, modelRelations);
+					   return modelRow;
+				   }, splitOn: splitOn, param: parameters);
 				model = modelRelations.Values.AsEnumerable();
 			}
 			return model;
