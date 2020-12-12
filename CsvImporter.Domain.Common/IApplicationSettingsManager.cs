@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace CsvImporter.Domain.Common.Definitions
+namespace CsvImporter.Domain.Common
 {
 	public interface IApplicationSettingsManager
 	{

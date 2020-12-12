@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CsvImporter.Domain.Entities
+namespace CsvImporter.Domain
 {
 	public class StockProduct
 	{
@@ -11,4 +11,3 @@ namespace CsvImporter.Domain.Entities
 		public string Description { get; set; }
 	}
 }
-

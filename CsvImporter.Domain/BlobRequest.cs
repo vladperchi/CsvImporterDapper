@@ -1,4 +1,4 @@
-﻿namespace CsvImporter.Domain.Settings
+﻿namespace CsvImporter.Domain
 {
 	public class BlobRequest
 	{
