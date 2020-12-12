@@ -9,7 +9,7 @@ namespace CsvImporter.Tests.UnitTest.RepositoriesMock
 {
 	public static class StockRepositoryMock
 	{
-		public static Mock<IStockRepository> GetMock()
+		public static Mock<IStockRepository> GetStockMock()
 		{
 			var stockRepository = new Mock<IStockRepository>();
 			stockRepository.Setup(c => c.SaveMassStockAsync(It.IsAny<string>()))
@@ -19,17 +19,17 @@ namespace CsvImporter.Tests.UnitTest.RepositoriesMock
 					int totalInserted = 0;
 					if (!string.IsNullOrEmpty(filePath))
 					{
-						totalInserted = UnitConsts.TOTAL_INSERTED;
+						totalInserted = UnitConsts.TOTAL_ROW;
 
 					}
-					return Task.FromResult(UnitConsts.TOTAL_INSERTED);
+					return Task.FromResult(UnitConsts.TOTAL_ROW);
 				});
 
 			stockRepository.Setup(c => c.DeleteMassAsync())
-				.Returns(Task.FromResult(UnitConsts.TOTAL_INSERTED));
+				.Returns(Task.FromResult(UnitConsts.TOTAL_ROW));
 
 			stockRepository.Setup(c => c.CountRowsInStock())
-				.Returns(Task.FromResult(UnitConsts.TOTAL_INSERTED));
+				.Returns(Task.FromResult(UnitConsts.TOTAL_ROW));
 
 			return stockRepository;
 		}
