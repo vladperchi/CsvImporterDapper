@@ -61,6 +61,7 @@ namespace CsvImporter.Utilities.Infrastructure.RestClient
 			{
 				using (var httpClient = new HttpClient())
 				{
+					httpClient.Timeout = TimeSpan.FromMinutes(60);
 					httpClient.BaseAddress = new Uri(BaseUri);
 					httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
@@ -77,18 +78,18 @@ namespace CsvImporter.Utilities.Infrastructure.RestClient
 					}
 				}
 			}
-			catch (ApplicationException aex)
+			catch (ApplicationException ae)
 			{
-				throw aex;
+				throw ae;
 			}
-			catch (HttpRequestException hrex)
+			catch (HttpRequestException e)
 			{
 
-				throw hrex;
+				throw e;
 			}
-			catch (Exception ex)
+			catch (Exception e)
 			{
-				throw ex;
+				throw e;
 			}
 		}
 
@@ -116,13 +117,13 @@ namespace CsvImporter.Utilities.Infrastructure.RestClient
 					}
 				}
 			}
-			catch (HttpRequestException hrex)
+			catch (HttpRequestException e)
 			{
-				throw hrex;
+				throw;
 			}
-			catch (Exception ex)
+			catch (Exception e)
 			{
-				throw ex;
+				throw;
 			}
 		}
 
@@ -151,11 +152,11 @@ namespace CsvImporter.Utilities.Infrastructure.RestClient
 			}
 			catch (HttpRequestException hrex)
 			{
-				throw hrex;
+				throw;
 			}
 			catch (Exception ex)
 			{
-				throw ex;
+				throw;
 			}
 		}
 	}
