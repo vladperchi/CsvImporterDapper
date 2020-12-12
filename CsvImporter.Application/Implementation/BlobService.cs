@@ -63,20 +63,18 @@ namespace CsvImporter.Application.Implementation
 				try
 				{
 					var bytesToFetch = Math.Min(blockSize, bytesRemaining);
-					using (MemoryStream ms = new MemoryStream())
-					{
-						blob.DownloadRangeToStream(ms, currentPointer, bytesToFetch, null, blobRequestOptions);
-						ms.Position = 0;
-						var contents = ms.ToArray();
+					using MemoryStream ms = new MemoryStream();
+					blob.DownloadRangeToStream(ms, currentPointer, bytesToFetch, null, blobRequestOptions);
+					ms.Position = 0;
+					var contents = ms.ToArray();
 
-						using (var fs = new FileStream(filePath, FileMode.Open))
-						{
-							fs.Position = currentPointer;
-							fs.Write(contents, 0, contents.Length);
-						}
-						currentPointer += contents.Length;
-						bytesRemaining -= contents.Length;
+					using (var fs = new FileStream(filePath, FileMode.Open))
+					{
+						fs.Position = currentPointer;
+						fs.Write(contents, 0, contents.Length);
 					}
+					currentPointer += contents.Length;
+					bytesRemaining -= contents.Length;
 				}
 				catch (Exception ex)
 				{

@@ -21,11 +21,9 @@ namespace CsvImporter.DataAccess.Implementations
 			{
 				var dataBaseName = connection.Database;
 				connection.Open();
-				using (var transaction = connection.BeginTransaction())
-				{
-					dataBaseCreated = connection.Execute(SqlStatements.Create_StockProductTable, null, transaction);
-					transaction.Commit();
-				}
+				using var transaction = connection.BeginTransaction();
+				dataBaseCreated = connection.Execute(SqlStatements.Create_StockProductTable, null, transaction);
+				transaction.Commit();
 			}
 			return dataBaseCreated;
 		}
