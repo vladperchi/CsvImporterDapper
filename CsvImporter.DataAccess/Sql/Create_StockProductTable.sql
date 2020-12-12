@@ -1,7 +1,5 @@
---Created by Vladimir
---Created 03/12/2020
---Description: Crea la tabla stockproduct
-
+﻿--Creator: Vladimir
+--Description: This sql create the stockproduct table
 IF OBJECT_ID(N'StockProduct') IS NULL
 BEGIN
 CREATE TABLE [StockProduct](	

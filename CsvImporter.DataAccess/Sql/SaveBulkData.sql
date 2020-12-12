@@ -1,6 +1,5 @@
---Created by Vladimir
---Created 03/12/2020
---Description: Guarda la data de forma masiva
+﻿--Created by Vladimir
+--Created 12/12/2020
 
 declare @sql nvarchar(MAX)
 declare @format varchar(10)
