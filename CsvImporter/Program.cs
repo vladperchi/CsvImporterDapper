@@ -35,7 +35,7 @@ namespace CsvImporter
 				await ProccessInfo();
 				DateTime endProcess = DateTime.Now;
 				Console.WriteLine($"Proceso Finalizado: {endProcess}");
-				Console.WriteLine($"Total Tiempo: {endProcess.Subtract(startProcess).TotalMinutes}");
+				Console.WriteLine($"Total Tiempo: {endProcess.Subtract(startProcess).TotalMinutes} Minutos");
 				Console.WriteLine("Presione una tecla para finalizar el proceso y cerrar el programa");
 				Console.ReadKey();
 			}
@@ -60,7 +60,7 @@ namespace CsvImporter
 			var stockProductService = _serviceProvider.GetService<IStockProductServiceRest>();
 
 			Console.WriteLine($"Descargando el archivo......Proceso Iniciado ==> {DateTime.Now}");
-			var filePath = await stockProductService.GetFileBlobAsync(blobRequest);
+			var filePath = await stockProductService.GetFileBlobParallelAsync(blobRequest);
 			Console.WriteLine($"Archivo descargado correctamente......Proceso Finalizado ==> {DateTime.Now}");
 			Console.WriteLine("Verificando si existe data...");
 			var totalRows = await stockProductService.CountStockDataAsync();
@@ -71,7 +71,7 @@ namespace CsvImporter
 				Console.WriteLine($"{totalRowsDeleted} Registros eliminados......Proceso Finalizado ==> {DateTime.Now}");
 			}
 			Console.WriteLine($"Guardando informacion en la base de datos......Proceso Iniciado ==> {DateTime.Now}");
-			var totalRowsSaved = await stockProductService.SaveStockDataAsync(filePath);
+			var totalRowsSaved = await stockProductService.SaveStockDataAsync(filePath.FilePath);
 			if (totalRowsSaved > 0)
 			{
 				Console.WriteLine($"{totalRowsSaved} Registros guardados......Proceso Finalizado ==> {DateTime.Now}");

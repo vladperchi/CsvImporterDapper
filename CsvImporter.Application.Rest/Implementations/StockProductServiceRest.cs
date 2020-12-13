@@ -17,6 +17,12 @@ namespace CsvImporter.Application.Rest.Implementations
 		{
 			return await _stockProductRestClient.GetFileBlobAsync(blobRequest);
 		}
+
+		public async Task<DownloadResult> GetFileBlobParallelAsync(BlobRequest blobRequest)
+		{
+			return await _stockProductRestClient.GetFileBlobParallelAsync(blobRequest);
+		}
+
 		public async Task<int> SaveStockDataAsync(string path)
 		{
 			return await _stockProductRestClient.SaveStockDataAsync(path);
@@ -31,6 +37,5 @@ namespace CsvImporter.Application.Rest.Implementations
 		{
 			return await _stockProductRestClient.DeleteStockDataAsync();
 		}
-
 	}
 }

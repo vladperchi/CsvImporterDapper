@@ -15,6 +15,13 @@ namespace CsvImporter.DataAccess.RestClient.Implementation
 			return await Post<string, BlobRequest>(blobRequest,
 				"api/StockProduct/GetFileBlob/", null);
 		}
+
+		public async Task<DownloadResult> GetFileBlobParallelAsync(BlobRequest blobRequest)
+		{
+			return await Post<DownloadResult, BlobRequest>(blobRequest,
+				"api/StockProduct/GetFileBlobParallel/", null);
+		}
+
 		public async Task<int> SaveStockDataAsync(string path)
 		{
 			return await Post<int, string>(path,

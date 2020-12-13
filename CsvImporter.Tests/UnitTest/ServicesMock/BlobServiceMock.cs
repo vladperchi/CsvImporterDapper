@@ -17,6 +17,14 @@ namespace CsvImporter.Tests.UnitTest.ServicesMock
 					return null;
 				});
 
+			blobService.Setup(c => c.GetFileFromBlobStorageParallel(It.IsAny<BlobRequest>()))
+				.Returns<BlobRequest>
+				((fileFullPath) =>
+				{
+					///TODO///
+					return null;
+				});
+
 			return blobService;
 		}
 	}

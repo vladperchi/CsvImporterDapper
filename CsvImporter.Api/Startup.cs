@@ -51,11 +51,8 @@ namespace CsvImporter.Api
 				c.SwaggerEndpoint("/swagger/v1/swagger.json", "CsvImporter - API v1");
 				c.RoutePrefix = string.Empty;
 			});
-
 			app.UseRouting();
-
 			app.UseAuthorization();
-
 			app.UseEndpoints(endpoints =>
 			{
 				endpoints.MapControllers();

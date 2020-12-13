@@ -26,6 +26,13 @@ namespace CsvImporter.Api.Controllers
 			return await _blobService.GetFileFromBlobStorage(blobRequest);
 		}
 
+		[HttpPost("GetFileBlobParallel")]
+		[AllowAnonymous]
+		public async Task<DownloadResult> GetFileBlobParallelAsync(BlobRequest blobRequest)
+		{
+			return await _blobService.GetFileFromBlobStorageParallel(blobRequest);
+		}
+
 		[HttpPost("SaveStockData")]
 		[AllowAnonymous]
 		public async Task<int> SaveStockDataAsync([FromBody] string stringPath)
