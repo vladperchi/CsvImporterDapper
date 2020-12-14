@@ -74,7 +74,6 @@ namespace CsvImporter.Application.Implementation
 							fs.Position = currentPointer;
 							fs.Write(contents, 0, contents.Length);
 						}
-
 						currentPointer += contents.Length;
 						bytesRemaining -= contents.Length;
 					}

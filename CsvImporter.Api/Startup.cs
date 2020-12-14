@@ -18,7 +18,6 @@ namespace CsvImporter.Api
 
 		public IConfiguration Configuration { get; }
 
-		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
 			services.RegisterApplicationDependencies();
@@ -27,36 +26,29 @@ namespace CsvImporter.Api
 			{
 				c.SwaggerDoc("v1", new OpenApiInfo
 				{
-					Title = "CSVImporter API",
 					Version = "v1",
-					Description = "API para importar stock en base de datos",
+					Title = "CsvImporter - API",
+					Description = "La API será responsable de la distribución y autorización general de los datos.",
 					Contact = new OpenApiContact
 					{
-						Name = "Vladimir Pero",
-						Email = string.Empty,
-						Url = new Uri("https://www.linkedin.com/in/vladperchi/"),
-					},
+						Name = "Acme Corporation",
+						Email = "contact@acmecorporation.com",
+						Url = new Uri("https://acmecorporation.com/contact"),
+					}
 				});
 			});
 		}
 
-		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 		{
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
 			}
-			// Enable middleware to serve generated Swagger as a JSON endpoint.
 			app.UseSwagger();
-
-			// Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
-			// specifying the Swagger JSON endpoint.
 			app.UseSwaggerUI(c =>
 			{
-				c.SwaggerEndpoint("/swagger/v1/swagger.json", "CSVImporter API V1");
-
-				// To serve SwaggerUI at application's root page, set the RoutePrefix property to an empty string.
+				c.SwaggerEndpoint("/swagger/v1/swagger.json", "CsvImporter - API v1");
 				c.RoutePrefix = string.Empty;
 			});
 
