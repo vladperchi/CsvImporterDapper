@@ -21,7 +21,7 @@ Entrando en materia vamos a la API ==> appsettings.json, modificamos la cadena d
 El tema principal dado los requerimientos, aparentemente no tenía mayor complicación, pero si tenía un nivel de complejidad por lo cual tome una serie de decisiones en aras de lograr el objetivo o reto impuesto.
 
 Inicialmente se tomó la decisión de crear un servicio, garantizando   de esta manera, sostenibilidad, mantenimiento, usabilidad y ciclo de vida
-En un inicio fue un tanto demorado, se refactorizo una y otro vez usando utilizar un bucle Parallel.ForEach para habilitar el paralelismo de datos sobre cualquier fuente de la mano con Range pero no se logro el resultado esperado por falta de tiempo para investigar varias referencias al respecto
+En un inicio fue un tanto demorado, se refactorizo una y otro vez implementando un bucle Parallel.ForEach para habilitar el paralelismo de datos sobre cualquier fuente de la mano con Range pero no se logro el resultado esperado por falta de tiempo para investigar varias referencias al respecto
  
 Tener en consideración que este proceso se realiza en un Pc con un mejor rendimiento, mas núcleos y RAM , y el resultado puede ser sorprendentemente increíble.
 
