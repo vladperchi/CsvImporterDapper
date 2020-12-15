@@ -27,11 +27,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsvImporter.Application", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsvImporter.Utilities", "CsvImporter.Utilities\CsvImporter.Utilities.csproj", "{B7E2470A-116C-495C-A161-3AEEF4BF3CF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvImporter.Api", "CsvImporter.Api\CsvImporter.Api.csproj", "{E4DE95A4-312D-4F3B-89EA-964A4652CDEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsvImporter.Api", "CsvImporter.Api\CsvImporter.Api.csproj", "{E4DE95A4-312D-4F3B-89EA-964A4652CDEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvImporter.Application.Rest", "CsvImporter.Application.Rest\CsvImporter.Application.Rest.csproj", "{4CA523FE-4E66-4D6F-ABC0-47E73A084FC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsvImporter.Application.Rest", "CsvImporter.Application.Rest\CsvImporter.Application.Rest.csproj", "{4CA523FE-4E66-4D6F-ABC0-47E73A084FC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvImporter.DataAccess.RestClient", "CsvImporter.DataAccess.RestClient\CsvImporter.DataAccess.RestClient.csproj", "{CC113BCA-B44E-4AB2-9B93-74112CBCAFEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsvImporter.DataAccess.RestClient", "CsvImporter.DataAccess.RestClient\CsvImporter.DataAccess.RestClient.csproj", "{CC113BCA-B44E-4AB2-9B93-74112CBCAFEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6.Tests", "6.Tests", "{218F1BA7-A9AE-4513-9F73-85E5CD421DC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsvImporter.Tests", "CsvImporter.Tests\CsvImporter.Tests.csproj", "{0744B587-65C4-4B5B-B4AF-F6CDCD4428F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +83,10 @@ Global
 		{CC113BCA-B44E-4AB2-9B93-74112CBCAFEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC113BCA-B44E-4AB2-9B93-74112CBCAFEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC113BCA-B44E-4AB2-9B93-74112CBCAFEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0744B587-65C4-4B5B-B4AF-F6CDCD4428F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0744B587-65C4-4B5B-B4AF-F6CDCD4428F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0744B587-65C4-4B5B-B4AF-F6CDCD4428F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0744B587-65C4-4B5B-B4AF-F6CDCD4428F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +102,7 @@ Global
 		{E4DE95A4-312D-4F3B-89EA-964A4652CDEE} = {F8117878-2B70-42D3-ABE1-27D277DE3741}
 		{4CA523FE-4E66-4D6F-ABC0-47E73A084FC2} = {87C3F970-A2A7-4221-A440-031BB87A08A7}
 		{CC113BCA-B44E-4AB2-9B93-74112CBCAFEE} = {F29FC2BF-19BB-4048-A035-75B7F93E27FB}
+		{0744B587-65C4-4B5B-B4AF-F6CDCD4428F4} = {218F1BA7-A9AE-4513-9F73-85E5CD421DC6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FD2551C7-C28A-4BB7-9CD5-8ED0604438B9}

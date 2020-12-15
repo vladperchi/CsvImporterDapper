@@ -28,7 +28,7 @@ namespace CsvImporter.Api
 				{
 					Version = "v1",
 					Title = "CsvImporter - API",
-					Description = "La API será responsable de la distribución y autorización general de los datos.",
+					Description = "La API será responsable de la importación de los datos.",
 					Contact = new OpenApiContact
 					{
 						Name = "Acme Corporation",
