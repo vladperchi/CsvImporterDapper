@@ -25,6 +25,6 @@ En un inicio fue un tanto demorado, se refactorizo una y otro vez implementando 
  
 Tener en consideración que este proceso se realiza en un Pc con un mejor rendimiento, mas núcleos y RAM , y el resultado puede ser sorprendentemente increíble.
 
-Bueno, espero que sea positivo y provecho como lo fue para mi. 
+Bueno, espero que sea positivo y provechoso como lo fue para mi. 
 
 # Gracias por su atención!!!
