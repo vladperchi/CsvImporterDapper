@@ -59,18 +59,18 @@ namespace CsvImporter
 
 			var stockProductService = _serviceProvider.GetService<IStockProductServiceRest>();
 
-			Console.WriteLine($"Descargando el archivo......Proceso Inicado ==> {DateTime.Now}");
+			Console.WriteLine($"Descargando el archivo......Proceso Iniciado ==> {DateTime.Now}");
 			var filePath = await stockProductService.GetFileBlobAsync(blobRequest);
 			Console.WriteLine($"Archivo descargado correctamente......Proceso Finalizado ==> {DateTime.Now}");
 			Console.WriteLine("Verificando si existe data...");
 			var totalRows = await stockProductService.CountStockDataAsync();
 			if (totalRows > 0)
 			{
-				Console.WriteLine($"Eliminando data anterior......Proceso Inicado ==> {DateTime.Now}");
+				Console.WriteLine($"Eliminando data anterior......Proceso Iniciado ==> {DateTime.Now}");
 				var totalRowsDeleted = await stockProductService.DeleteStockDataAsync();
 				Console.WriteLine($"{totalRowsDeleted} Registros eliminados......Proceso Finalizado ==> {DateTime.Now}");
 			}
-			Console.WriteLine($"Guardando informacion en la base de datos......Proceso Inicado ==> {DateTime.Now}");
+			Console.WriteLine($"Guardando informacion en la base de datos......Proceso Iniciado ==> {DateTime.Now}");
 			var totalRowsSaved = await stockProductService.SaveStockDataAsync(filePath);
 			if (totalRowsSaved > 0)
 			{
