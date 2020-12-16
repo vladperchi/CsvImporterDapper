@@ -17,8 +17,6 @@ namespace CsvImporter.DataAccess.Implementations
 		{
 			try
 			{
-
-
 				var rowsQuantity = default(int);
 				using (var connection = await _dapperBase.GetConnection())
 				{
@@ -43,11 +41,9 @@ namespace CsvImporter.DataAccess.Implementations
 
 		public async Task<int> DeleteMassAsync()
 		{
-			var affectedRows = 0;
 			try
 			{
-
-				affectedRows = await _dapperBase.DeleteAsync(SqlStatements.DeleteMassStock, null, null, 0);
+				int affectedRows = await _dapperBase.DeleteAsync(SqlStatements.DeleteMassStock, null, null, 0);
 				return affectedRows;
 			}
 			catch (System.Exception ex)
@@ -58,7 +54,7 @@ namespace CsvImporter.DataAccess.Implementations
 
 		public async Task<int> CountRowsInStock()
 		{
-			var totalCount = 0;
+			int totalCount;
 			try
 			{
 				totalCount = await _dapperBase.ExecuteEscalarAsync(SqlStatements.CountStock);

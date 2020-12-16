@@ -26,7 +26,6 @@ namespace CsvImporter.DataAccess.Implementations
 					dataBaseCreated = connection.Execute(SqlStatements.Create_StockProductTable, null, transaction);
 					transaction.Commit();
 				}
-
 			}
 			return dataBaseCreated;
 		}

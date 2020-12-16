@@ -78,18 +78,18 @@ namespace CsvImporter.Utilities.Infrastructure.RestClient
 					}
 				}
 			}
-			catch (ApplicationException ae)
+			catch (ApplicationException aex)
 			{
-				throw ae;
+				throw aex;
 			}
-			catch (HttpRequestException e)
+			catch (HttpRequestException hrex)
 			{
 
-				throw e;
+				throw hrex;
 			}
-			catch (Exception e)
+			catch (Exception ex)
 			{
-				throw e;
+				throw ex;
 			}
 		}
 
@@ -117,13 +117,13 @@ namespace CsvImporter.Utilities.Infrastructure.RestClient
 					}
 				}
 			}
-			catch (HttpRequestException e)
+			catch (HttpRequestException hrex)
 			{
-				throw;
+				throw hrex;
 			}
-			catch (Exception e)
+			catch (Exception ex)
 			{
-				throw;
+				throw ex;
 			}
 		}
 
@@ -152,11 +152,11 @@ namespace CsvImporter.Utilities.Infrastructure.RestClient
 			}
 			catch (HttpRequestException hrex)
 			{
-				throw;
+				throw hrex;
 			}
 			catch (Exception ex)
 			{
-				throw;
+				throw ex;
 			}
 		}
 	}
