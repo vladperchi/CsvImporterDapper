@@ -13,30 +13,30 @@ namespace CsvImporter.Tests.UnitTest
 	{
 		public StockProductService_Test()
 		{
-			this.instanceToTest = new StockProductService(StockRepositoryMock.GetMock().Object);
+			this.InstanceToTest = new StockProductService(StockRepositoryMock.GetMock().Object);
 		}
 
-		internal IStockProductService instanceToTest { get; }
+		internal IStockProductService InstanceToTest { get; }
 
 		[Fact]
 		public async Task SaveMassStock()
 		{
 			string path = "File\\Stock.csv";
-			var result = await instanceToTest.SaveMassStockAsync(path);
+			var result = await InstanceToTest.SaveMassStockAsync(path);
 			Assert.True(result == UnitConsts.TOTAL_INSERTED);
 		} 
 
 		[Fact]
 		public async Task DeleteStock()
 		{
-			var result = await instanceToTest.DeleteMassAsync();
+			var result = await InstanceToTest.DeleteMassAsync();
 			Assert.True(result == UnitConsts.TOTAL_DELETED);
 		}
 
 		[Fact]
 		public async Task CountStock()
 		{
-			var result = await instanceToTest.CountRowsInStock();
+			var result = await InstanceToTest.CountRowsInStock();
 			Assert.True(result == UnitConsts.TOTAL_DELETED);
 		}
 

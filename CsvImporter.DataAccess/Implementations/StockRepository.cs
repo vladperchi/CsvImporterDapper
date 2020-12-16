@@ -9,26 +9,24 @@ namespace CsvImporter.DataAccess.Implementations
 	{
 		public StockRepository(IDapperBase<StockProduct> dapperBase)
 		{
-			_dapperBase = dapperBase;
+			DapperBase = dapperBase;
 		}
 
-		IDapperBase<StockProduct> _dapperBase { get; }
+		IDapperBase<StockProduct> DapperBase { get; }
 		public async Task<int> SaveMassStockAsync(string filePath)
 		{
 			try
 			{
 				var rowsQuantity = default(int);
-				using (var connection = await _dapperBase.GetConnection())
+				using (var connection = await DapperBase.GetConnection())
 				{
 					connection.Open();
-					using (var transaction = connection.BeginTransaction())
+					using var transaction = connection.BeginTransaction();
+					rowsQuantity = connection.Execute(SqlStatements.SaveBulkData, new
 					{
-						rowsQuantity = connection.Execute(SqlStatements.SaveBulkData, new
-						{
-							path = filePath
-						}, transaction, 0);
-						transaction.Commit();
-					}
+						path = filePath
+					}, transaction, 0);
+					transaction.Commit();
 
 				}
 				return rowsQuantity;
@@ -43,7 +41,7 @@ namespace CsvImporter.DataAccess.Implementations
 		{
 			try
 			{
-				int affectedRows = await _dapperBase.DeleteAsync(SqlStatements.DeleteMassStock, null, null, 0);
+				int affectedRows = await DapperBase.DeleteAsync(SqlStatements.DeleteMassStock, null, null, 0);
 				return affectedRows;
 			}
 			catch (System.Exception ex)
@@ -57,7 +55,7 @@ namespace CsvImporter.DataAccess.Implementations
 			int totalCount;
 			try
 			{
-				totalCount = await _dapperBase.ExecuteEscalarAsync(SqlStatements.CountStock);
+				totalCount = await DapperBase.ExecuteEscalarAsync(SqlStatements.CountStock);
 			}
 			catch (System.Exception ex)
 			{
