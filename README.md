@@ -21,6 +21,6 @@ Creado por [Vladimir][linkedin-url] - ¡no dudes en contactarme!
 [issues-shield]: https://img.shields.io/github/issues/vladperchi/CsvImporter?style=flat-square
 [issues-url]: https://github.com/vladperchi/CsvImporter/issues
 [license-shield]: https://img.shields.io/github/license/vladperchi/CsvImporter?style=flat-square
-[license-url]: https://github.com/vladperchi/CsvImporter/blob/master/LICENSE
+[license-url]: https://github.com/vladperchi/CsvImporter/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/vladperchi/
