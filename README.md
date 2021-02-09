@@ -1,4 +1,4 @@
-[![Build Status][Build-shield]][Build-url]
+<!--[![Build Status][Build-shield]][Build-url]-->
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
