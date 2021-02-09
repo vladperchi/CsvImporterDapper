@@ -1,3 +1,4 @@
+[![Build Status][Build-shield]][Build-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -29,7 +30,8 @@
 Creado por [Vladimir][linkedin-url] - ¡no dudes en contactarme!
 
 
-
+[build-shield]: https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fvladperchi%2FCsvImporter%2Fbadge&style=flat-square
+[build-url]: https://github.com/vladperchi/CsvImporter/actions
 [forks-shield]: https://img.shields.io/github/forks/vladperchi/CsvImporter?style=flat-square
 [forks-url]: https://github.com/vladperchi/CsvImporter/network/members
 [stars-shield]: https://img.shields.io/github/stars/vladperchi/CsvImporter.svg?style=flat-square
