@@ -4,16 +4,31 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 <!--[![MIT License][license-shield]][license-url]-->
 
-
-## CsvImporter ASP.NET Core API
+## CsvImporter
 
 * Esta es una aplicación consola desarrollada con **CSharp, SQL, Dapper** para **descargar** un archivo **.csv** almacenado en una cuenta de almacenamiento Azure. Luego **leemos y procesamos** la data e **insertamos** en una base de datos SQL local.
 
-* **Swagger** para brindar documentación de la **API**.
-* **XUnit, Moq** para las pruebas **Unitarias** y de **Integración**.
+## Tecnologías
+
+**Back-End**
+
+- **.NET C# 8**
+- **ASP.NET Core**
+- **Dapper**
+- **Ioc**
+- **Api REST**
+- **Swagger**
+- **XUnit**
+- **Moq**
+
+**Database**
+
+- **SQL**
 
 ## Contacto
 Creado por [Vladimir][linkedin-url] - ¡no dudes en contactarme!
+
+
 
 [forks-shield]: https://img.shields.io/github/forks/vladperchi/CsvImporter?style=flat-square
 [forks-url]: https://github.com/vladperchi/CsvImporter/network/members
