@@ -164,7 +164,6 @@ namespace CsvImporter.Application.Implementation
 				});
 
 				#endregion
-
 				DateTime startTime = DateTime.Now;
 
 				#region Parallel download  
@@ -197,7 +196,6 @@ namespace CsvImporter.Application.Implementation
 				result.ParallelDownloads = index;
 
 				#endregion
-
 				result.TimeTaken = DateTime.Now.Subtract(startTime);
 
 				#region Merge to single file  
@@ -207,7 +205,7 @@ namespace CsvImporter.Application.Implementation
 					destinationStream.Write(tempFileBytes, 0, tempFileBytes.Length);
 					File.Delete(tempFile.FileName);
 				}
-				#endregion
+                #endregion
 				result.FilePath = destinationStream.Name;
 
 				return result;

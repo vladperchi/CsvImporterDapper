@@ -1,5 +1,9 @@
 ﻿namespace CsvImporter
 {
+	//TODO MAKE
+	//! DANGER
+	//? TAKE
+	//* OK
 	public static class Constants
 	{
 		public static string FILENAME = "Stock.CSV";
