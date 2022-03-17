@@ -1,34 +1,53 @@
 <!--[![Build Status][Build-shield]][Build-url]-->
+
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+
 <!--[![MIT License][license-shield]][license-url]-->
 
 ## CsvImporter
 
-* Esta es una aplicación consola desarrollada con **CSharp, SQL, Dapper** para **descargar** un archivo **.csv** almacenado en una cuenta de almacenamiento Azure. Luego **leemos y procesamos** la data e **insertamos** en una base de datos SQL local.
+- This is a console application developed with **CSharp, SQL, Dapper** to **download** a **.csv** file stored in an Azure storage account. We then **read and process** the data and **insert** it into a local SQL database.
 
-## Tecnologías
+## Technology Stack
 
-**Back-End**
+- API - ASP.NET Core
+- Data Access
+- DB Providers - MSSQL SERVER
 
-- **.NET C# 8**
-- **ASP.NET Core**
-- **Dapper**
-- **Ioc**
-- **Api REST**
-- **Swagger**
-- **XUnit**
-- **Moq**
+## Features
 
-**Database**
+- [x] .NET C# 8
+- [x] ASP.NET Core
+- [x] Dapper
+- [x] Ioc
+- [x] Swagger
 
-- **SQL**
+## Core Developer Contact
 
-## Contacto
-Creado por [Vladimir][linkedin-url] - ¡no dudes en contactarme!
+- Twitter - [codewithvladperchi][twitter-url]
+- Linkedin - [Vladimir][linkedin-url]
+- GitHub - [vladperchi][github-url]
 
+## License
+
+This project is licensed with the [MIT License][license-url].
+
+## Support
+
+Has this Project helped you learn something New? or Helped you at work?
+Here are a few ways by which you can support.
+
+- Leave a star! :star:
+- Recommend this awesome project to your colleagues
+- Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn][linkedin-url]
+- Or, If you want to support this project in the long run, [consider buying me a coffee][buymeacoffee-url]!
+
+<br>
+
+<a href="https://www.buymeacoffee.com/codewithvlad"><img width="250" alt="black-button" src="https://user-images.githubusercontent.com/31455818/138557309-27587d91-7b82-4cab-96bb-90f4f4e600f1.png" ></a>
 
 [build-shield]: https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2Fvladperchi%2FCsvImporter%2Fbadge&style=flat-square
 [build-url]: https://github.com/vladperchi/CsvImporter/actions
@@ -42,3 +61,8 @@ Creado por [Vladimir][linkedin-url] - ¡no dudes en contactarme!
 [license-url]: https://github.com/vladperchi/CsvImporter/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/vladperchi/
+[github-url]: https://github.com/vladperchi/
+[blog-url]: https://www.codewithvladperchi.com
+[facebook-url]: https://www.facebook.com/codewithvladperchi
+[twitter-url]: https://www.twitter.com/codewithvlad
+[buymeacoffee-url]: https://www.buymeacoffee.com/codewithvlad
