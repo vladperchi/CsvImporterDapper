@@ -72,7 +72,7 @@ Here are a few ways by which you can support.
 - Do consider endorsing me on LinkedIn for ASP.NET Core - [Connect via LinkedIn][linkedin-url]
 - Or, If you want to support this project in the long run, [consider buying me a coffee][buymeacoffee-url]!
 
-<br>
+<br />
 
 <a href="https://www.buymeacoffee.com/codewithvlad"><img width="250" alt="black-button" src="https://user-images.githubusercontent.com/31455818/138557309-27587d91-7b82-4cab-96bb-90f4f4e600f1.png" ></a>
 
