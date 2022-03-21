@@ -25,6 +25,33 @@
 - [x] Ioc
 - [x] Swagger
 
+# Getting Started
+
+To get started, here are the avaiable three options: download, clone or fork.
+
+- Download ZIP.
+- Open GitBash, command `git clone`, paste `https://github.com/vladperchi/CsvImporterDapper.git` and enter for clone.
+
+You would probably need to take this approach if you want to keep your source code upto date with the latest changes.
+
+- Make a fork of this repository in your Github account. Use this if you want to always keep your version up-to date with the latest changes.
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, create, and inspire. Any contribution you make is **greatly appreciated**.
+
+Join the elite list!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/IncredibleFeature`)
+3. Commit your Changes (`git commit -m 'Add some IncredibleFeature'`)
+4. Push to the Branch (`git push origin feature/IncredibleFeature`)
+5. Open a Pull Request
+
+<a href="https://github.com/vladperchi/CsvImporter/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=vladperchi/CsvImporter" />
+</a>
+
 ## Core Developer Contact
 
 - Twitter - [codewithvladperchi][twitter-url]
